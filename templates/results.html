@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles59.css') }}">
+
+    <script>
+        var animal = new Audio()
+        animal.src = "../static/sounds/{{animal}}.mp3";
+
+        var hurray = new Audio()
+        hurray.src = "../static/sounds/hurray.mp3";
+
+        var boo = new Audio()
+        boo.src = "../static/sounds/boo.mp3";
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="fieldset">
+            <p style="margin:0px;"><b>This is a:</b></p>
+            <p style="margin:0px;">{{animal}}</p>
+            <img src="{{pic}}" />
+            <br>
+            <input id="button1" type="submit" class="button" value="Play Sound" onmousedown="animal.play()">
+            <h1 style=font-size:30px>Were we right?</h1>
+            <input id="button2" type="submit" class="button" value="Yes" onmousedown="hurray.play()">
+            <input id="button3" type="submit" class="button" value="No" onmousedown="boo.play()">
+        </div>
+    </div>
+
+    <strong><nav>
+            <a href="{{ url_for('home') }}">Play Again</a>
+    </nav></strong>
+
+</body>

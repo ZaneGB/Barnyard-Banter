@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Barnyard Banter App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles59.css')}}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Barnyard Banter App</h1>
+            <strong><nav>
+                <a href="{{ url_for('about') }}">Meet the Team</a>
+            </nav></strong>
+        </div>
+    </header>
+    <div>
+
+
+    </div>
+    <div class="container">
+        <form action="/predict" method="POST" class="form">
+            <div class="fieldset">
+                <label>Upload your image</label>
+                <br>
+                <input class="exp" name="exp" />
+                <br>
+                <input type="submit" class="button" value="predict" />
+                <br>
+                <br>
+                <strong><nav> 
+                    <a href="/choose">OR Choose from the Barnyard</a>
+                </nav></strong>
+                    </div>
+
+        </form>
+</div>
+</body>
+
+</html>
